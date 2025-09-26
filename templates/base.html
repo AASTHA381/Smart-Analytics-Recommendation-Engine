@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PR - Business Intelligence Platform{% endblock %}</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    
+    <!-- Additional CSS -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>{% block header_title %}PR Platform{% endblock %}</h1>
+            <p class="subtitle">{% block header_subtitle %}Advanced Business Intelligence & Recommendations{% endblock %}</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('dashboard') }}" {% if request.endpoint == 'dashboard' %}class="active"{% endif %}>Dashboard</a></li>
+                <li><a href="{{ url_for('recommendations') }}" {% if request.endpoint == 'recommendations' %}class="active"{% endif %}>Recommendations</a></li>
+                <li><a href="#" onclick="app.runAnalysis()">Analysis</a></li>
+                <li><a href="#" onclick="document.getElementById('data-file').click()">Upload Data</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Alert Container -->
+    <div id="alert-container" class="container"></div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center;">
+            <div class="loading"></div>
+            <p id="loading-message" style="margin-top: 1rem;">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="data-file" style="display: none;" accept=".csv,.xlsx,.json" />
+
+    <!-- Main Content -->
+    <main class="container">
+        {% block content %}
+        <!-- Default content goes here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer style="background-color: #f8f9fa; padding: 2rem 0; margin-top: 4rem; text-align: center; color: #6c757d;">
+        <div class="container">
+            <p>&copy; 2025 PR Platform. All rights reserved.</p>
+            <p>Advanced Business Intelligence & Machine Learning Recommendations</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    <!-- Additional JavaScript -->
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

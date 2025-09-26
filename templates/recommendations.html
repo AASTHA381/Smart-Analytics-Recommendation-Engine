@@ -1,0 +1,440 @@
+{% extends "base.html" %}
+
+{% block title %}Recommendations - PR Platform{% endblock %}
+
+{% block header_title %}AI-Powered Recommendations{% endblock %}
+{% block header_subtitle %}Intelligent insights to drive your business forward{% endblock %}
+
+{% block content %}
+<!-- Recommendation Controls -->
+<section class="recommendation-controls">
+    <div class="card">
+        <h2>Generate New Recommendations</h2>
+        <div class="form-group">
+            <label for="recommendation-type">Recommendation Type:</label>
+            <select id="recommendation-type">
+                <option value="general">General Business Insights</option>
+                <option value="sales">Sales Optimization</option>
+                <option value="customer">Customer Retention</option>
+                <option value="product">Product Development</option>
+                <option value="marketing">Marketing Strategy</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="time-period">Time Period:</label>
+            <select id="time-period">
+                <option value="7_days">Last 7 Days</option>
+                <option value="30_days" selected>Last 30 Days</option>
+                <option value="90_days">Last 90 Days</option>
+                <option value="1_year">Last Year</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="confidence-threshold">Minimum Confidence Level:</label>
+            <input type="range" id="confidence-threshold" min="0.5" max="1.0" step="0.1" value="0.7">
+            <span id="confidence-value">70%</span>
+        </div>
+        
+        <button class="btn" id="generate-recommendations" onclick="app.getRecommendations()">
+            🎯 Generate Recommendations
+        </button>
+    </div>
+</section>
+
+<!-- Current Recommendations -->
+<section class="current-recommendations">
+    <div class="card">
+        <h2>Current Recommendations</h2>
+        <div id="recommendations-container">
+            <!-- Sample recommendations for initial display -->
+            <div class="recommendation-card card">
+                <div class="recommendation-header">
+                    <h3>Optimize Product Mix</h3>
+                    <span class="confidence">Confidence: 92.3%</span>
+                </div>
+                <div class="recommendation-type">
+                    <span class="status status-info">Product Strategy</span>
+                </div>
+                <p class="recommendation-description">
+                    Based on sales data analysis, focus on promoting high-margin products that show strong demand patterns.
+                </p>
+                <ul class="recommendation-items">
+                    <li>Increase inventory for Product A (highest ROI)</li>
+                    <li>Bundle Product B with complementary items</li>
+                    <li>Consider discontinuing low-performing Product X</li>
+                    <li>Launch targeted promotion for Product C</li>
+                </ul>
+                <div class="recommendation-actions">
+                    <button class="btn btn-sm" onclick="app.implementRecommendation(0)">Implement</button>
+                    <button class="btn btn-secondary btn-sm" onclick="app.saveRecommendation(0)">Save for Later</button>
+                    <button class="btn btn-danger btn-sm" onclick="this.closest('.recommendation-card').remove()">Dismiss</button>
+                </div>
+            </div>
+
+            <div class="recommendation-card card">
+                <div class="recommendation-header">
+                    <h3>Customer Retention Strategy</h3>
+                    <span class="confidence">Confidence: 87.1%</span>
+                </div>
+                <div class="recommendation-type">
+                    <span class="status status-success">Customer</span>
+                </div>
+                <p class="recommendation-description">
+                    Implement targeted retention campaigns for at-risk customer segments identified through behavioral analysis.
+                </p>
+                <ul class="recommendation-items">
+                    <li>Create loyalty program for high-value customers</li>
+                    <li>Send personalized re-engagement emails</li>
+                    <li>Offer exclusive discounts to dormant customers</li>
+                    <li>Implement win-back campaigns for churned customers</li>
+                </ul>
+                <div class="recommendation-actions">
+                    <button class="btn btn-sm" onclick="app.implementRecommendation(1)">Implement</button>
+                    <button class="btn btn-secondary btn-sm" onclick="app.saveRecommendation(1)">Save for Later</button>
+                    <button class="btn btn-danger btn-sm" onclick="this.closest('.recommendation-card').remove()">Dismiss</button>
+                </div>
+            </div>
+
+            <div class="recommendation-card card">
+                <div class="recommendation-header">
+                    <h3>Marketing Channel Optimization</h3>
+                    <span class="confidence">Confidence: 78.9%</span>
+                </div>
+                <div class="recommendation-type">
+                    <span class="status status-warning">Marketing</span>
+                </div>
+                <p class="recommendation-description">
+                    Reallocate marketing budget based on channel performance and customer acquisition cost analysis.
+                </p>
+                <ul class="recommendation-items">
+                    <li>Increase social media advertising budget by 25%</li>
+                    <li>Reduce traditional advertising spend</li>
+                    <li>Focus on content marketing for organic growth</li>
+                    <li>Implement referral program incentives</li>
+                </ul>
+                <div class="recommendation-actions">
+                    <button class="btn btn-sm" onclick="app.implementRecommendation(2)">Implement</button>
+                    <button class="btn btn-secondary btn-sm" onclick="app.saveRecommendation(2)">Save for Later</button>
+                    <button class="btn btn-danger btn-sm" onclick="this.closest('.recommendation-card').remove()">Dismiss</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recommendation History -->
+<section class="recommendation-history">
+    <div class="card">
+        <h2>Recommendation History</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Recommendation</th>
+                        <th>Type</th>
+                        <th>Confidence</th>
+                        <th>Status</th>
+                        <th>Impact</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-09-24</td>
+                        <td>Optimize inventory levels</td>
+                        <td><span class="status status-info">Operations</span></td>
+                        <td>94.2%</td>
+                        <td><span class="status status-success">Implemented</span></td>
+                        <td>+$15K savings</td>
+                        <td>
+                            <button class="btn btn-sm btn-secondary">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2025-09-23</td>
+                        <td>Launch targeted email campaign</td>
+                        <td><span class="status status-warning">Marketing</span></td>
+                        <td>81.7%</td>
+                        <td><span class="status status-success">Implemented</span></td>
+                        <td>+12% CTR</td>
+                        <td>
+                            <button class="btn btn-sm btn-secondary">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2025-09-22</td>
+                        <td>Adjust pricing strategy</td>
+                        <td><span class="status status-success">Sales</span></td>
+                        <td>88.5%</td>
+                        <td><span class="status status-info">In Progress</span></td>
+                        <td>Pending</td>
+                        <td>
+                            <button class="btn btn-sm btn-secondary">View Details</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2025-09-21</td>
+                        <td>Customer segmentation update</td>
+                        <td><span class="status status-success">Customer</span></td>
+                        <td>76.3%</td>
+                        <td><span class="status status-warning">Pending</span></td>
+                        <td>-</td>
+                        <td>
+                            <button class="btn btn-sm btn-secondary">View Details</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Recommendation Insights -->
+<section class="recommendation-insights">
+    <div class="grid grid-2">
+        <div class="card">
+            <h3>Success Metrics</h3>
+            <div class="metric-card">
+                <div class="metric-value">89.4%</div>
+                <div class="metric-label">Implementation Success Rate</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">$47K</div>
+                <div class="metric-label">Total Value Generated</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">23</div>
+                <div class="metric-label">Recommendations This Month</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Recommendation Categories</h3>
+            <div class="category-breakdown">
+                <div class="category-item">
+                    <span class="category-label">Sales Optimization</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%;"></div>
+                    </div>
+                    <span class="category-percentage">40%</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-label">Customer Retention</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 25%;"></div>
+                    </div>
+                    <span class="category-percentage">25%</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-label">Marketing</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 20%;"></div>
+                    </div>
+                    <span class="category-percentage">20%</span>
+                </div>
+                <div class="category-item">
+                    <span class="category-label">Operations</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 15%;"></div>
+                    </div>
+                    <span class="category-percentage">15%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.recommendation-card {
+    border-left: 4px solid #667eea;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.recommendation-card:hover {
+    border-left-color: #5a6fd8;
+    transform: translateX(5px);
+}
+
+.recommendation-header {
+    display: flex;
+    justify-content: between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.recommendation-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+.confidence {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.recommendation-description {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.recommendation-items {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+}
+
+.recommendation-items li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.recommendation-items li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.recommendation-actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group input[type="range"] {
+    width: 80%;
+    margin-right: 1rem;
+}
+
+#confidence-value {
+    font-weight: bold;
+    color: #667eea;
+}
+
+.category-breakdown {
+    margin-top: 1rem;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.category-label {
+    flex: 0 0 140px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+.category-percentage {
+    flex: 0 0 40px;
+    font-weight: 500;
+    color: #667eea;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .recommendation-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .recommendation-actions {
+        justify-content: center;
+    }
+    
+    .category-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .progress-bar {
+        width: 100%;
+        margin: 0;
+    }
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Recommendations-specific JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Update confidence value display
+    const confidenceSlider = document.getElementById('confidence-threshold');
+    const confidenceValue = document.getElementById('confidence-value');
+    
+    if (confidenceSlider && confidenceValue) {
+        confidenceSlider.addEventListener('input', function() {
+            confidenceValue.textContent = Math.round(this.value * 100) + '%';
+        });
+    }
+    
+    // Add animation to recommendation cards
+    const cards = document.querySelectorAll('.recommendation-card');
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+            card.style.transition = 'all 0.5s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+        }, index * 200);
+    });
+});
+
+// Custom recommendation functions
+function viewRecommendationDetails(id) {
+    app.showAlert(`Viewing details for recommendation ${id}`, 'info');
+}
+
+function exportRecommendations() {
+    app.showAlert('Exporting recommendations to CSV...', 'info');
+    // Add export logic here
+}
+</script>
+{% endblock %}

@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - PR Platform{% endblock %}
+
+{% block header_title %}Business Intelligence Dashboard{% endblock %}
+{% block header_subtitle %}Real-time insights and performance metrics{% endblock %}
+
+{% block content %}
+<!-- Key Metrics Section -->
+<section class="metrics-section">
+    <div class="grid grid-2">
+        <div class="metric-card">
+            <div class="metric-value" id="total-sales">$125,000</div>
+            <div class="metric-label">Total Sales</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value" id="total-customers">1,250</div>
+            <div class="metric-label">Total Customers</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value" id="avg-order-value">$85.50</div>
+            <div class="metric-label">Average Order Value</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value" id="conversion-rate">3.2%</div>
+            <div class="metric-label">Conversion Rate</div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Actions Section -->
+<section class="quick-actions">
+    <div class="card">
+        <h2>Quick Actions</h2>
+        <div class="grid grid-3">
+            <button class="btn" id="get-recommendations" onclick="app.getRecommendations()">
+                <span>📊</span> Get Recommendations
+            </button>
+            <button class="btn btn-secondary" id="run-analysis" onclick="app.runAnalysis()">
+                <span>🔍</span> Run Analysis
+            </button>
+            <button class="btn btn-success" onclick="document.getElementById('data-file').click()">
+                <span>📁</span> Upload Data
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Activity Section -->
+<section class="recent-activity">
+    <div class="card">
+        <h2>Recent Activity</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Status</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10:30 AM</td>
+                        <td>Sales Analysis</td>
+                        <td><span class="status status-success">Completed</span></td>
+                        <td>Generated 5 recommendations</td>
+                    </tr>
+                    <tr>
+                        <td>09:15 AM</td>
+                        <td>Customer Segmentation</td>
+                        <td><span class="status status-success">Completed</span></td>
+                        <td>Identified 3 customer clusters</td>
+                    </tr>
+                    <tr>
+                        <td>08:45 AM</td>
+                        <td>Data Upload</td>
+                        <td><span class="status status-info">Processing</span></td>
+                        <td>Marketing data (15,000 records)</td>
+                    </tr>
+                    <tr>
+                        <td>08:30 AM</td>
+                        <td>Model Training</td>
+                        <td><span class="status status-warning">In Progress</span></td>
+                        <td>Recommendation engine update</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- Data Overview Section -->
+<section class="data-overview">
+    <div class="grid grid-2">
+        <div class="card">
+            <h2>Sales Performance</h2>
+            <div class="chart-placeholder" style="height: 200px; background: linear-gradient(45deg, #e3f2fd, #bbdefb); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #1976d2;">
+                <p><strong>📈 Sales Trend Chart</strong><br>
+                <small>Interactive chart would be displayed here</small></p>
+            </div>
+            <div class="chart-summary">
+                <p><strong>Key Insights:</strong></p>
+                <ul>
+                    <li>Sales increased by 15% this month</li>
+                    <li>Top performing product: Product A</li>
+                    <li>Peak sales time: 2-4 PM</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Customer Analytics</h2>
+            <div class="chart-placeholder" style="height: 200px; background: linear-gradient(45deg, #e8f5e8, #c8e6c9); border-radius: 5px; display: flex; align-items: center; justify-content: center; color: #388e3c;">
+                <p><strong>👥 Customer Distribution</strong><br>
+                <small>Customer segment visualization</small></p>
+            </div>
+            <div class="chart-summary">
+                <p><strong>Customer Segments:</strong></p>
+                <ul>
+                    <li>High Value: 25% (312 customers)</li>
+                    <li>Regular: 60% (750 customers)</li>
+                    <li>New: 15% (188 customers)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- System Status Section -->
+<section class="system-status">
+    <div class="card">
+        <h2>System Status</h2>
+        <div class="grid grid-3">
+            <div class="status-item">
+                <h4>ML Models</h4>
+                <span class="status status-success">Online</span>
+                <p>All recommendation models are running optimally</p>
+            </div>
+            <div class="status-item">
+                <h4>Data Pipeline</h4>
+                <span class="status status-success">Active</span>
+                <p>Real-time data processing is functioning normally</p>
+            </div>
+            <div class="status-item">
+                <h4>API Services</h4>
+                <span class="status status-success">Healthy</span>
+                <p>All API endpoints are responding correctly</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Analysis Results Container (Hidden by default) -->
+<section id="analysis-container" style="display: none;">
+    <!-- Analysis results will be populated here by JavaScript -->
+</section>
+
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.metrics-section {
+    margin-bottom: 2rem;
+}
+
+.quick-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.quick-actions .btn span {
+    font-size: 1.2rem;
+}
+
+.chart-placeholder {
+    margin-bottom: 1rem;
+}
+
+.chart-summary ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.chart-summary li {
+    padding: 0.25rem 0;
+    border-left: 3px solid #667eea;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.status-item {
+    text-align: center;
+}
+
+.status-item h4 {
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+.status-item p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .quick-actions .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Dashboard-specific JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize dashboard charts and animations
+    console.log('Dashboard initialized');
+    
+    // Simulate real-time updates
+    setInterval(function() {
+        // Update metrics with slight variations (simulation)
+        const elements = ['total-sales', 'total-customers', 'avg-order-value', 'conversion-rate'];
+        elements.forEach(id => {
+            const element = document.getElementById(id);
+            if (element && Math.random() < 0.1) { // 10% chance to update each interval
+                element.style.color = '#28a745';
+                setTimeout(() => {
+                    element.style.color = '';
+                }, 1000);
+            }
+        });
+    }, 5000); // Update every 5 seconds
+});
+</script>
+{% endblock %}
