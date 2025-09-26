@@ -1,0 +1,16 @@
+campaign_id,campaign_name,channel,start_date,end_date,budget,spend,impressions,clicks,conversions,ctr,cpc,conversion_rate,roas,target_audience,creative_type,status
+1,Summer Electronics Sale,Google Ads,2025-06-01,2025-08-31,15000,14567.89,450000,18750,1237,4.17,0.78,6.60,3.45,Electronics Enthusiasts,Display,Completed
+2,Back to School Laptops,Facebook Ads,2025-07-15,2025-09-15,8000,7834.56,280000,12320,892,4.40,0.64,7.24,4.12,Students & Parents,Video,Completed
+3,Smart Home Appliances,Instagram,2025-08-01,2025-09-30,5000,4892.34,156000,7800,456,5.00,0.63,5.85,2.89,Home Owners,Carousel,Active
+4,Wireless Audio Promo,YouTube,2025-09-01,2025-10-31,12000,8765.43,380000,15200,1045,4.00,0.58,6.88,3.78,Music Lovers,Video,Active
+5,Holiday Gift Guide,Email Marketing,2025-11-01,2025-12-31,3000,2456.78,45000,4500,567,10.00,0.55,12.60,8.45,Existing Customers,Newsletter,Scheduled
+6,Fitness Tracker Launch,TikTok,2025-08-15,2025-09-30,6000,5234.67,220000,11000,678,5.00,0.48,6.16,3.21,Fitness Enthusiasts,Short Video,Active
+7,Coffee Lovers Campaign,Pinterest,2025-09-10,2025-10-15,2500,2134.56,89000,3560,234,4.00,0.60,6.57,2.95,Coffee Enthusiasts,Pin,Active
+8,Gaming Accessories,Twitch,2025-09-05,2025-10-20,8000,6789.12,167000,8350,445,5.00,0.81,5.33,2.67,Gamers,Sponsored Stream,Active
+9,Mother's Day Special,Facebook Ads,2025-05-01,2025-05-15,4000,3891.23,134000,6700,389,5.00,0.58,5.81,3.45,Women 25-55,Image,Completed
+10,Father's Day Tech,Google Ads,2025-06-10,2025-06-20,3500,3234.56,98000,4900,298,5.00,0.66,6.08,3.12,Men 30-60,Display,Completed
+11,Black Friday Preview,Multi-Channel,2025-10-01,2025-11-30,25000,18567.89,750000,37500,2890,5.00,0.50,7.71,4.56,Bargain Hunters,Mixed,Scheduled
+12,New Year Fitness,Instagram Stories,2025-01-01,2025-01-31,5000,4567.89,198000,9900,567,5.00,0.46,5.73,3.89,Health Conscious,Story,Completed
+13,Valentine's Electronics,Facebook Ads,2025-02-01,2025-02-14,6000,5678.90,234000,11700,789,5.00,0.49,6.74,4.12,Couples,Carousel,Completed
+14,Spring Cleaning Sale,Google Shopping,2025-03-01,2025-04-30,7000,6345.67,156000,7800,445,5.00,0.81,5.71,2.98,Homemakers,Product Listing,Completed
+15,Graduation Gifts,LinkedIn,2025-05-15,2025-06-15,4500,4123.45,67000,3350,234,5.00,1.23,6.99,2.34,Professionals,Sponsored Content,Completed

@@ -1,0 +1,31 @@
+product_id,product_name,category,sales_volume,revenue,cost,profit_margin,date,region
+1,Laptop Pro 15,Electronics,145,87000,58000,0.33,2025-09-01,North
+2,Wireless Headphones,Electronics,230,34500,20700,0.40,2025-09-01,South
+3,Coffee Maker Deluxe,Appliances,89,26700,16020,0.40,2025-09-01,East
+4,Smart Watch Series X,Electronics,167,50100,30060,0.40,2025-09-01,West
+5,Bluetooth Speaker,Electronics,201,20100,12060,0.40,2025-09-01,North
+6,Air Purifier Max,Appliances,78,31200,18720,0.40,2025-09-01,South
+7,Gaming Mouse RGB,Electronics,324,19440,11664,0.40,2025-09-01,East
+8,Wireless Charger,Electronics,156,9360,5616,0.40,2025-09-01,West
+9,Smart Thermostat,Home,95,28500,17100,0.40,2025-09-01,North
+10,Fitness Tracker,Electronics,287,28700,17220,0.40,2025-09-01,South
+11,Laptop Pro 15,Electronics,156,93600,62400,0.33,2025-09-02,North
+12,Wireless Headphones,Electronics,198,29700,17820,0.40,2025-09-02,South
+13,Coffee Maker Deluxe,Appliances,92,27600,16560,0.40,2025-09-02,East
+14,Smart Watch Series X,Electronics,189,56700,34020,0.40,2025-09-02,West
+15,Bluetooth Speaker,Electronics,234,23400,14040,0.40,2025-09-02,North
+16,Air Purifier Max,Appliances,85,34000,20400,0.40,2025-09-02,South
+17,Gaming Mouse RGB,Electronics,298,17880,10728,0.40,2025-09-02,East
+18,Wireless Charger,Electronics,167,10020,6012,0.40,2025-09-02,West
+19,Smart Thermostat,Home,103,30900,18540,0.40,2025-09-02,North
+20,Fitness Tracker,Electronics,312,31200,18720,0.40,2025-09-02,South
+21,Laptop Pro 15,Electronics,178,106800,71200,0.33,2025-09-03,North
+22,Wireless Headphones,Electronics,245,36750,22050,0.40,2025-09-03,South
+23,Coffee Maker Deluxe,Appliances,87,26100,15660,0.40,2025-09-03,East
+24,Smart Watch Series X,Electronics,201,60300,36180,0.40,2025-09-03,West
+25,Bluetooth Speaker,Electronics,267,26700,16020,0.40,2025-09-03,North
+26,Air Purifier Max,Appliances,92,36800,22080,0.40,2025-09-03,South
+27,Gaming Mouse RGB,Electronics,356,21360,12816,0.40,2025-09-03,East
+28,Wireless Charger,Electronics,189,11340,6804,0.40,2025-09-03,West
+29,Smart Thermostat,Home,98,29400,17640,0.40,2025-09-03,North
+30,Fitness Tracker,Electronics,298,29800,17880,0.40,2025-09-03,South

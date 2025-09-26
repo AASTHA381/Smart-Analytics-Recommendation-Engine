@@ -1,0 +1,21 @@
+customer_id,first_name,last_name,age,gender,email,phone,city,state,zip_code,registration_date,last_purchase_date,total_purchases,total_spent,average_order_value,purchase_frequency,customer_lifetime_value,preferred_category,loyalty_status
+1,John,Smith,34,M,john.smith@email.com,555-0101,New York,NY,10001,2024-01-15,2025-09-20,12,1456.78,121.40,2.1,2890.34,Electronics,Gold
+2,Sarah,Johnson,28,F,sarah.j@email.com,555-0102,Los Angeles,CA,90001,2024-02-03,2025-09-18,8,892.45,111.56,1.8,1678.92,Appliances,Silver
+3,Michael,Brown,45,M,m.brown@email.com,555-0103,Chicago,IL,60601,2024-01-22,2025-09-19,15,2234.67,148.98,2.5,4123.45,Electronics,Platinum
+4,Emily,Davis,31,F,emily.davis@email.com,555-0104,Houston,TX,77001,2024-03-10,2025-09-17,6,567.89,94.65,1.2,987.65,Home,Bronze
+5,David,Wilson,39,M,d.wilson@email.com,555-0105,Phoenix,AZ,85001,2024-01-08,2025-09-21,18,3456.78,192.04,3.2,6789.12,Electronics,Platinum
+6,Jessica,Miller,26,F,j.miller@email.com,555-0106,Philadelphia,PA,19101,2024-04-15,2025-09-16,4,345.67,86.42,0.8,567.89,Appliances,Bronze
+7,Christopher,Moore,52,M,c.moore@email.com,555-0107,San Antonio,TX,78201,2024-02-28,2025-09-22,21,4567.89,217.52,3.8,8901.23,Electronics,Platinum
+8,Amanda,Taylor,29,F,a.taylor@email.com,555-0108,San Diego,CA,92101,2024-03-25,2025-09-15,9,1234.56,137.17,1.9,2345.67,Home,Silver
+9,Matthew,Anderson,37,M,m.anderson@email.com,555-0109,Dallas,TX,75201,2024-01-30,2025-09-23,13,1890.45,145.42,2.3,3678.90,Electronics,Gold
+10,Ashley,Thomas,33,F,a.thomas@email.com,555-0110,San Jose,CA,95101,2024-05-12,2025-09-14,7,789.12,112.73,1.4,1456.78,Appliances,Silver
+11,Joshua,Jackson,41,M,j.jackson@email.com,555-0111,Austin,TX,73301,2024-02-14,2025-09-24,16,2678.90,167.43,2.7,5234.56,Electronics,Gold
+12,Stephanie,White,24,F,s.white@email.com,555-0112,Jacksonville,FL,32099,2024-06-08,2025-09-13,3,234.56,78.19,0.6,345.67,Home,Bronze
+13,Andrew,Harris,48,M,a.harris@email.com,555-0113,Fort Worth,TX,76102,2024-01-05,2025-09-25,19,3789.12,199.43,3.4,7234.56,Electronics,Platinum
+14,Nicole,Martin,35,F,n.martin@email.com,555-0114,Columbus,OH,43085,2024-04-03,2025-09-12,10,1345.67,134.57,2.0,2567.89,Appliances,Silver
+15,Ryan,Thompson,30,M,r.thompson@email.com,555-0115,Charlotte,NC,28202,2024-03-18,2025-09-26,11,1567.89,142.54,2.2,2890.12,Electronics,Gold
+16,Lauren,Garcia,27,F,l.garcia@email.com,555-0116,San Francisco,CA,94102,2024-07-01,2025-09-11,5,456.78,91.36,1.0,678.90,Home,Bronze
+17,Kevin,Martinez,44,M,k.martinez@email.com,555-0117,Indianapolis,IN,46201,2024-02-20,2025-09-27,17,2890.45,170.03,3.0,5456.78,Electronics,Platinum
+18,Rachel,Robinson,32,F,r.robinson@email.com,555-0118,Seattle,WA,98101,2024-05-25,2025-09-10,8,901.23,112.65,1.6,1678.90,Appliances,Silver
+19,Brandon,Clark,36,M,b.clark@email.com,555-0119,Denver,CO,80202,2024-04-10,2025-09-28,14,2123.45,151.68,2.6,4012.34,Electronics,Gold
+20,Megan,Rodriguez,29,F,m.rodriguez@email.com,555-0120,Washington,DC,20001,2024-06-15,2025-09-09,6,678.90,113.15,1.3,1234.56,Home,Bronze

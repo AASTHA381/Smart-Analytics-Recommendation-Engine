@@ -1,0 +1,26 @@
+operation_id,date,department,process_name,efficiency_score,cost_per_unit,processing_time_hours,throughput_units_per_hour,quality_score,downtime_minutes,maintenance_cost,energy_consumption_kwh,staff_count,overtime_hours,location
+1,2025-09-01,Manufacturing,Product Assembly,87.5,12.45,8.2,125,94.2,15,234.56,145.8,12,2.5,Factory A
+2,2025-09-01,Logistics,Order Fulfillment,92.1,3.67,6.8,189,96.8,8,89.45,67.2,8,1.2,Warehouse B
+3,2025-09-01,Quality Control,Product Testing,89.3,8.91,4.5,67,98.5,5,156.78,34.5,6,0.8,Lab C
+4,2025-09-01,Packaging,Product Packaging,85.7,2.34,7.1,234,92.1,12,67.89,89.7,10,1.8,Factory A
+5,2025-09-01,Shipping,Order Dispatch,91.4,5.67,9.3,156,95.3,18,123.45,78.9,15,3.2,Warehouse B
+6,2025-09-02,Manufacturing,Product Assembly,88.2,12.23,8.0,128,94.8,12,245.67,142.3,12,2.1,Factory A
+7,2025-09-02,Logistics,Order Fulfillment,93.5,3.45,6.5,195,97.2,6,78.90,65.8,8,0.9,Warehouse B
+8,2025-09-02,Quality Control,Product Testing,90.1,8.76,4.3,69,98.9,3,145.67,32.1,6,0.5,Lab C
+9,2025-09-02,Packaging,Product Packaging,86.9,2.28,6.9,238,93.4,10,58.90,87.2,10,1.5,Factory A
+10,2025-09-02,Shipping,Order Dispatch,92.8,5.45,9.1,162,96.1,15,115.67,76.4,15,2.8,Warehouse B
+11,2025-09-03,Manufacturing,Product Assembly,86.8,12.67,8.4,122,93.5,18,256.78,148.9,12,2.8,Factory A
+12,2025-09-03,Logistics,Order Fulfillment,91.2,3.78,7.0,183,95.9,10,92.34,69.5,8,1.5,Warehouse B
+13,2025-09-03,Quality Control,Product Testing,88.7,9.12,4.7,65,97.8,7,167.89,36.8,6,1.1,Lab C
+14,2025-09-03,Packaging,Product Packaging,84.3,2.45,7.3,228,91.7,15,72.34,91.8,10,2.1,Factory A
+15,2025-09-03,Shipping,Order Dispatch,90.6,5.89,9.6,148,94.7,22,134.56,81.2,15,3.6,Warehouse B
+16,2025-09-04,Manufacturing,Product Assembly,89.1,12.34,8.1,126,95.1,13,238.90,144.2,12,2.3,Factory A
+17,2025-09-04,Logistics,Order Fulfillment,94.2,3.56,6.4,198,97.8,5,82.45,64.3,8,0.8,Warehouse B
+18,2025-09-04,Quality Control,Product Testing,91.5,8.67,4.2,71,99.2,2,141.23,31.7,6,0.4,Lab C
+19,2025-09-04,Packaging,Product Packaging,87.6,2.31,6.8,241,93.8,9,62.78,86.1,10,1.4,Factory A
+20,2025-09-04,Shipping,Order Dispatch,93.4,5.34,8.9,165,96.5,13,108.90,74.8,15,2.5,Warehouse B
+21,2025-09-05,Manufacturing,Product Assembly,88.9,12.12,7.9,129,94.6,11,229.45,141.6,12,2.0,Factory A
+22,2025-09-05,Logistics,Order Fulfillment,92.8,3.67,6.7,187,96.4,7,86.78,66.9,8,1.1,Warehouse B
+23,2025-09-05,Quality Control,Product Testing,90.3,8.89,4.4,68,98.7,4,152.34,33.9,6,0.7,Lab C
+24,2025-09-05,Packaging,Product Packaging,86.2,2.39,7.0,235,92.9,11,65.45,88.4,10,1.6,Factory A
+25,2025-09-05,Shipping,Order Dispatch,91.9,5.56,9.2,159,95.8,16,127.89,77.6,15,3.0,Warehouse B
