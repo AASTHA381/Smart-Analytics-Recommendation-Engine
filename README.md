@@ -104,6 +104,10 @@ PR/
 
 ### 📊 Dashboard Page - Your Business Command Center
 <img width="3672" height="1653" alt="image" src="https://github.com/user-attachments/assets/61525db6-bd97-40b1-aa32-e47f35c1bdcc" />
+<img width="2850" height="1572" alt="image" src="https://github.com/user-attachments/assets/1a675ccb-c613-415d-a951-907559b2094d" />
+<img width="2817" height="1221" alt="image" src="https://github.com/user-attachments/assets/d393a5bd-5fa2-4027-be14-4a4ec5229fe7" />
+<img width="2841" height="1092" alt="image" src="https://github.com/user-attachments/assets/88a0efbf-981a-414c-8ec1-4f1ff90f1a2d" />
+<img width="1176" height="1341" alt="image" src="https://github.com/user-attachments/assets/f36bdcf2-74a8-4627-b1cd-cb99e1c7f5f2" />
 
 The dashboard is your main hub for monitoring business performance and accessing key features.
 
@@ -594,4 +598,5 @@ app.run(debug=True, port=5001)
 ---
 
 **Built with ❤️ using Flask, scikit-learn, and modern web technologies**
+
 
