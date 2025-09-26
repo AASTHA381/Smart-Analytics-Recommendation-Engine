@@ -103,6 +103,7 @@ PR/
 ## 🎯 Complete User Journey & Features
 
 ### 📊 Dashboard Page - Your Business Command Center
+<img width="3672" height="1653" alt="image" src="https://github.com/user-attachments/assets/61525db6-bd97-40b1-aa32-e47f35c1bdcc" />
 
 The dashboard is your main hub for monitoring business performance and accessing key features.
 
@@ -593,3 +594,4 @@ app.run(debug=True, port=5001)
 ---
 
 **Built with ❤️ using Flask, scikit-learn, and modern web technologies**
+
